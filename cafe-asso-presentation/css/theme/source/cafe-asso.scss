@@ -1,0 +1,128 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is brown.
+ *
+ * This theme is Copyright (C) 2012-2013 Owen Versteeg, http://owenversteeg.com - it is MIT licensed.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: "Montserrat", Helvetica, sans-serif;
+$mainFontSize: 30px;
+$mainColor: #383D3D;
+$headingFont: "Montserrat", Helvetica, sans-serif;
+$headingColor: #383D3D;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #dddddd;
+
+$heading1Size: 5em;
+$heading2Size: 3em;
+$heading3Size: 1.55em;
+$heading4Size: 1.00em;
+
+
+$linkColor: #51483D;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: #26351C;
+
+.reveal a {
+  line-height: 1.3em;
+}
+
+@mixin bodyBackground() {
+  background-image: radial-gradient(circle farthest-corner at center, #fff 0%, #ddd 100%);
+}
+
+// SECTIONS===========================
+
+.reveal p.legend { 
+  font-size: 0.9em;
+  margin: 0;
+} 
+
+
+.reveal section.title-par {
+  p { 
+    font-size: 1.75em;
+    margin: 1.5em 0;
+    }
+  }
+
+.reveal section.title-pic-legend {
+  h2 {
+    font-size: 1.5em;
+  }
+  p.legend { 
+    font-size: 1em;
+    // margin: em 0;
+    }
+}
+
+.reveal section.title-ulist{
+  h2{
+    font-size: 2.75em; 
+  }
+  li {
+    margin: 1em 0;
+  }
+  &.title-ulist-figure {
+    .figure {
+        font-size: 3em;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    ul{
+      list-style: none
+    }
+    li, span, div {
+      vertical-align: middle;
+    }
+    div {
+      display: inline-block;
+    }
+    .small {
+      font-style: italic;
+      font-size: 80%;
+    }
+  }
+}
+
+.reveal section.title-subtitle{
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2.75em;
+    // margin: 1em 0;
+  }
+}
+
+.reveal section.title-double-pic-legend{
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1em;
+    margin: 20px 0 0 0;
+  }
+}
+
+.reveal section.title-quotes{
+  blockquote {
+    box-shadow: none;
+    font-size: 97%;
+  }
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
